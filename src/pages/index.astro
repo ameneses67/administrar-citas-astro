@@ -1,15 +1,15 @@
 ---
+import DatosPaciente from "../components/DatosPaciente.astro";
+import MainLayout from "../layyouts/MainLayout.astro";
+
+const title = "Administrador de Citas";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout title={title}>
+  <h1
+    class="container uppercase text-white text-4xl py-12 font-extrabold text-center"
+  >
+    Administrador de pacientes de veterinaria
+  </h1>
+  <DatosPaciente />
+</MainLayout>

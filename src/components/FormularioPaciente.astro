@@ -1,0 +1,72 @@
+<form action="" class="flex flex-col gap-4 my-8">
+  <div
+    class="flex flex-col gap-2 md:gap-8 md:flex-row md:justify-between md:items-center"
+  >
+    <label for="mascota" class="font-semibold">Nombre:</label>
+    <input
+      type="text"
+      id="mascota"
+      name="mascota"
+      placeholder="Nombre de la mascota"
+      class="md:w-2/3"
+    />
+  </div>
+  <div
+    class="flex flex-col gap-2 md:gap-8 md:flex-row md:justify-between md:items-center"
+  >
+    <label for="propietario" class="font-semibold">Propietario:</label>
+    <input
+      type="text"
+      id="propietario"
+      name="propietario"
+      placeholder="Nombre dueño de la mascota"
+      class="md:w-2/3"
+    />
+  </div>
+  <div
+    class="flex flex-col gap-2 md:gap-8 md:flex-row md:justify-between md:items-center"
+  >
+    <label for="telefono" class="font-semibold">Teléfono:</label>
+    <input
+      type="tel"
+      id="telefono"
+      name="telefono"
+      placeholder="(123) 456-7890"
+      class="md:w-2/3"
+    />
+  </div>
+  <div
+    class="flex flex-col gap-2 md:gap-8 md:flex-row md:justify-between md:items-center"
+  >
+    <label for="fecha" class="font-semibold">Fecha:</label>
+    <input
+      type="date"
+      id="fecha"
+      name="fecha"
+      placeholder=""
+      class="md:w-2/3"
+    />
+  </div>
+  <div
+    class="flex flex-col gap-2 md:gap-8 md:flex-row md:justify-between md:items-center"
+  >
+    <label for="hora" class="font-semibold">Hora:</label>
+    <input type="time" id="hora" name="hora" placeholder="" class="md:w-2/3" />
+  </div>
+  <div
+    class="flex flex-col gap-2 md:gap-8 md:flex-row md:justify-between md:items-center"
+  >
+    <label for="sintomas" class="font-semibold self-start">Síntomas:</label>
+    <textarea
+      id="sintomas"
+      name="sintomas"
+      class="md:w-2/3"
+      rows="10"
+      placeholder="Síntomas de la mascota"></textarea>
+  </div>
+  <button
+    type="submit"
+    class="uppercase text-white bg-green-600 hover:bg-green-700 hover:shadow-xl transition ease-in-out text-center font-bold py-2 rounded-md shadow-md"
+    >Crear cita</button
+  >
+</form>
