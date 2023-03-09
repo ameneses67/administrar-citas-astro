@@ -140,8 +140,6 @@ class UI {
 
 const ui = new UI();
 
-export { ui };
-
 function eliminarCita(id: string) {
   // eliminar la cita
   administrarCitas.eliminarCita(id);
@@ -153,7 +151,24 @@ function eliminarCita(id: string) {
   ui.imprimirCitas(administrarCitas);
 }
 
-export let editando: boolean;
+// modo edición
+class Editando {
+  _edicion: boolean;
+
+  constructor() {
+    this._edicion = false;
+  }
+
+  get edicion() {
+    return this._edicion;
+  }
+
+  set edicion(value: boolean) {
+    this._edicion = value;
+  }
+}
+
+const editando = new Editando();
 
 // cargar los datos y el modo edición
 function cargarEdicion(cita: IcitaObj) {
@@ -173,5 +188,7 @@ function cargarEdicion(cita: IcitaObj) {
   // cambiar text botón
   formularioButton.textContent = "Guardar Cambios";
 
-  editando = true;
+  editando.edicion = true;
 }
+
+export { ui, editando };

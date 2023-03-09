@@ -21,6 +21,12 @@ export class Citas {
   eliminarCita(id: string) {
     this.citas = this.citas.filter((cita) => cita.id !== id);
   }
+
+  editarCita(citaActualizada: IcitaObj) {
+    this.citas = this.citas.map((cita) =>
+      cita.id === citaActualizada.id ? citaActualizada : cita
+    ); // usamos map en lugar de forEach porque map retorna un arreglo
+  }
 }
 
 // instanciar clase Citas
@@ -47,16 +53,17 @@ function nuevaCita(e: Event) {
     return;
   }
 
-  if (editando) {
+  if (editando.edicion) {
     ui.imprimirAlerta("Editado correctamente", "notificacion");
 
     // pasar objeto de la cita a edición
+    administrarCitas.editarCita({ ...citaObj });
 
     // regresar texto botón a original
     formularioButton.textContent = "Crear Cita";
 
     // deshabilitar modo edición
-    editando = false;
+    editando.edicion = false;
   } else {
     // generar un id único para cada cita
     citaObj.id = Date.now().toString();
