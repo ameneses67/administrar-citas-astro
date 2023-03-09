@@ -1,17 +1,21 @@
 ---
+import Alerta from "./Alerta.astro";
+import Citas from "./Citas.astro";
 import FormularioPaciente from "./FormularioPaciente.astro";
 ---
 
-<section class="px-4 sm:px-8">
-  <div
-    class="container mx-auto bg-white flex flex-col lg:flex-row gap-16 p-8 sm:p-16"
-  >
-    <div class="w-full">
-      <h2 class="text-3xl font-bold">Datos del paciente</h2>
-      <FormularioPaciente />
-    </div>
-    <div class="w-full">
-      <h2 class="text-3xl font-bold">No hay citas</h2>
+<section class="mb-16 px-4 sm:px-8">
+  <div class="container mx-auto bg-white py-12">
+    <Alerta />
+    <div class="flex flex-col gap-16 px-4 sm:px-16 lg:flex-row">
+      <div class="w-full">
+        <h2 class="text-3xl font-bold">Datos del paciente</h2>
+        <FormularioPaciente />
+      </div>
+      <div class="w-full">
+        <h2 class="text-3xl font-bold">Administra tus citas</h2>
+        <Citas />
+      </div>
     </div>
   </div>
 </section>
