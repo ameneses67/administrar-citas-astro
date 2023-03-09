@@ -52,7 +52,7 @@ class UI {
 
       // crear div para cada cita
       const divCitas = document.createElement("div");
-      divCitas.classList.add("p-4", "border-b", "border-gray-300");
+      divCitas.classList.add("pb-8", "border-b", "border-gray-300");
       divCitas.dataset.id = id;
 
       // crear párrafo para cada dato de la cita

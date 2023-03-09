@@ -54,7 +54,7 @@ function nuevaCita(e: Event) {
   }
 
   if (editando.edicion) {
-    ui.imprimirAlerta("Editado correctamente", "notificacion");
+    ui.imprimirAlerta("Cita Editada Correctamente", "notificacion");
 
     // pasar objeto de la cita a edición
     administrarCitas.editarCita({ ...citaObj });
